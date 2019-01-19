@@ -16,6 +16,7 @@ public class CgLibLoggerProxy implements MethodInterceptor {
         return enhancer.create();
     }
 
+    // 其他地方如果注入的是代理对象，调用代理对象的方法时，以下拦截方法每次都会执行。
     @Override
     public Object intercept(Object o, Method method, Object[] objects,
                             MethodProxy methodProxy) throws Throwable {
